@@ -76,6 +76,8 @@ fully typed and can contain complex rows. *Remark: Schema aware is still experim
 * Java SDK: The protobuf extension is fully schema aware and also includes protobuf option
 conversion to beam schema options. *Remark: Schema aware is still experimental.*
 ([BEAM-9044](https://issues.apache.org/jira/browse/BEAM-9044))
+* Java SDK: Added a transform integrating with Google Cloud Vision API to analyze images.
+([BEAM-9646](https://issues.apache.org/jira/browse/BEAM-9646))
 
 ## Breaking Changes
 
