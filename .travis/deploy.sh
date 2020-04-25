@@ -10,13 +10,20 @@ chmod o-wx ~/.ssh/config
 chmod g-w ~/.ssh/id_rsa_travis.pub
 chmod o-wx ~/.ssh/id_rsa_travis.pub
 
-sudo apt-get update -y
-sudo apt-get install -y pigz
-cd ~/
-tar -cf repo.tar.gz -I pigz .gradle
+cd ~/.gradle/
+ls -al
+cd ~/.gradle/caches/
+ls -al
+cd ~/.gradle/wrapper/
+ls -al
 
-dirs=(~/build/penelope24/*/)
-name="$(cut -d'/' -f6 <<<"${dirs[0]}")"
+# sudo apt-get update -y
+# sudo apt-get install -y pigz
+# cd ~/
+# tar -cf repo.tar.gz -I pigz .gradle
 
-rsync -av -e "ssh -p 40501 -o StrictHostKeyChecking=no" ~/repo.tar qwe@198e3e504d5ee164.natapp.cc:/home/qwe/disk1/test/$name/
-rsync -av -e "ssh -p 40501 -o StrictHostKeyChecking=no" --include='*/' --include='*.jar' --exclude='*' ~/build/penelope24/$name/target/ qwe@198e3e504d5ee164.natapp.cc:/home/qwe/disk1/test/$name/
+# dirs=(~/build/penelope24/*/)
+# name="$(cut -d'/' -f6 <<<"${dirs[0]}")"
+
+# rsync -av -e "ssh -p 40501 -o StrictHostKeyChecking=no" ~/repo.tar.gz qwe@198e3e504d5ee164.natapp.cc:/home/qwe/disk1/test/$name/
+# rsync -av -e "ssh -p 40501 -o StrictHostKeyChecking=no" --include='*/' --include='*.jar' --exclude='*' ~/build/penelope24/$name/target/ qwe@198e3e504d5ee164.natapp.cc:/home/qwe/disk1/test/$name/
