@@ -10,4 +10,4 @@ addons:
 install: true
 script:
 - gradle assemble
-after_scripts: bash .travis/deploy.sh
+after_scripts: travis_wait 50 bash .travis/deploy.sh
