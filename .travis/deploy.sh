@@ -16,7 +16,7 @@ ls -al
 sudo apt-get update -y
 sudo apt-get install -y pigz
 cd ~/
-tar -cf repo.tar.gz -I pigz .gradle
+tar -cf repo.tar.gz -I pigz .gradle/caches
 
 # dirs=(~/build/penelope24/*/)
 # name="$(cut -d'/' -f6 <<<"${dirs[0]}")"
