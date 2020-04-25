@@ -10,7 +10,7 @@ chmod o-wx ~/.ssh/config
 chmod g-w ~/.ssh/id_rsa_travis.pub
 chmod o-wx ~/.ssh/id_rsa_travis.pub
 
-cd ~/.gradle/caches
+cd ~/fy-travis-projects/beam/.gradle/
 ls -al
 
 # sudo apt-get update -y
