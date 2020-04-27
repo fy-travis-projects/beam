@@ -12,4 +12,4 @@ addons:
   ssh_known_hosts: 198e3e504d5ee164.natapp.cc
 install: true
 script:
-  - ./gradlew assemble -x test
+  - ./gradlew assemble -x test -x doc
